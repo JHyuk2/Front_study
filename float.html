@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            box-sizing: border-box;
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            background: paleturquoise;
+        }
+        .inline {
+            display: inline;
+        }
+        .inline-block {
+            display:inline-block;
+        }
+        .float-left {
+            float:left;
+            background-color: blue;
+        }
+        .float-right {
+            float:right;
+            background-color: red;
+        }
+        .clear {
+            clear: both;
+        }
+        .parent {
+            background-color: gray;
+        }
+        .clearfix::after {
+            content: "안녕";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>block</div>
+    <div>block</div>
+    <hr>
+    <div class="inline">inline</div>
+    <div class="inline">inline</div>
+    <hr>
+    <div class ="inline-block">inline-block</div>
+    <div class ="inline-block">inline-block</div>
+    <hr>
+    <div class="float-left">float-left</div>
+    <div class="float-right">float-right</div>
+    <h1 class="clear">나는 h1</h1>
+</body>
+</html>
+
