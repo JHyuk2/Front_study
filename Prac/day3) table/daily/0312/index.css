@@ -1,0 +1,31 @@
+.u1 {
+    background-color: blue;
+}
+.l1 {
+    display:inline;
+    margin: auto;
+}
+
+th{
+    font-family: Noto-serif;
+    font-size: 18px;
+}
+
+tr{
+    margin-right:20px;
+    text-align: center;
+    height: 50px;
+}
+.float-left{
+    float:left;
+    font-family: Noto-serif;
+    margin-left: 30px;
+    margin-right: 10px;
+}
+
+.float-right{
+    font-family: Noto-serif;
+    float:right;
+    margin-left: 15px;
+    margin-right: 15px;
+}
