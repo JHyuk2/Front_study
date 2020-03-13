@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table class="floating simpletable">
+        <col width=100><col width=100><col width=100><col width=100>
+        <tbody>
+            <tr><td colspan="10">1st row</td></tr>
+            <tr><td colspan="2" style="background-color: blue;">Column 1 -&gt; Least wide</td><td colspan="1">2nd</td><td colspan="1">3rd</td></tr>
+            <tr><td colspan="10" style="background-color: red;">3rd row</td></tr>
+            <tr><td colspan="1">1st cell</td><td colspan="9" style="background-color: green;">4th row</td></tr>
+        </tbody>
+
+        <table class="floating simpletable" border>
+            <col width=100><col width=100><col width=100>
+            <tbody>
+                <tr><td colspan="4">1st row</td></tr>
+                <tr><td colspan="2">span 1</td><td>span 2</td><td>span 3 </td></tr>
+                <tr><td colspan="4">3rd row</td></tr>
+                <tr><td>span</td><td colspan="3">other span</td></tr>
+            </tbody>
+        </table>
+    </table>
+</body>
+</html>
