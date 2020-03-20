@@ -17,6 +17,7 @@ form.addEventListener('submit', function(event) {
   }
   if(password != passwordConfirmation) {
     alert('비밀번호가 일치하지 않습니다.')
+    alert("password:" + password + "\npw_confirm: " + passwordConfirmation)
     return false
   }
   alert((userName)+'님, 회원가입을 축하합니다.')
