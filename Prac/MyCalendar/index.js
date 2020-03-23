@@ -15,6 +15,7 @@ function nextCalendar() {//다음 달
         today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
         buildCalendar();//달력 cell 만들어 출력
 }
+
 function buildCalendar(){//현재 달 달력 만들기
     var doMonth = new Date(today.getFullYear(),today.getMonth(),1);
     //이번 달의 첫째 날,

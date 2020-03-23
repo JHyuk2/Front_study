@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 1. Nav -->
+  <nav class="d-flex justify-content-between align-items-center px-3 position-fixed bg-dark w-100">
+    <a href="#">
+      <img src="images/logo.png" alt="Logo Imag, liste">
+    </a>
+    <ul class="d-flex list-unstyled my-0 font-weight-bold"> <!-- ul이 기본적으로 갖고 있는 margin이 있기 때문에, 초기화, list-->
+      <li class="mx-3"><a class="text-white text-decoration-none" href="#">Home</a></li>
+      <li class="mx-3"><a class="text-white text-decoration-none" href="#">Community</a></li>
+      <li class="mx-3"><a class="text-white text-decoration-none" href="#">Login</a></li>
+    </ul>
+  </nav>
+
+  <!-- 2. Header -->
+  <header class="d-flex flex-column justify-content-center font-weight-bold">
+      <div class="text-white display-2 text-center font-weight-bold">Cinema</div>
+      <div class="text-white display-2 text-center font-weight-bold">Community</div>
+      <div class="text-center mt-5">
+        <a class="btn btn-primary font-weight-bold" href="#">Let's Go</a>
+      </div>
+  </header>
+
+  <!-- 3. Section -->
+  <!-- 그림은 d-flex 영향을 받고, 텍스트는 text-align을 따로 적용해야만 미들에 오는 이유...? -->
+  <section class="d-flex flex-column w-100">
+    <h2 class="text-center my-5">Used Skills</h2>
+    <article class="d-flex justify-content-around text-center">
+      <div class="d-flex flex-column">
+        <img src="images/web.png" alt="Web Image">
+        <p>Web</p>
+      </div>
+      <div class="d-flex flex-column">
+        <img src="images/html5.png" alt="HTML5 Image">
+        <p>HTML5</p>
+      </div>
+      <div class="d-flex flex-column">
+        <img src="images/css3.png" alt="CSS3 Image">
+        <p class="align-center">CSS3</p>
+      </div class="d-flex flex-column">
+    </article>
+  </section class="d-flex flex-column w-100">
+
+  <!-- 4. Footer -->
+  <footer class="d-flex fixed-bottom align-items-center text-white justify-content-center bg-primary">
+    <p class="my-0">HTML & CSS project. Created by <span class="font-weight-bold text-warning">이종혁</span>, 2020</p>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
