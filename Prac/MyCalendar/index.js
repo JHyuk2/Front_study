@@ -1,5 +1,20 @@
 var today = new Date();//오늘 날짜//내 컴퓨터 로컬을 기준으로 today에 Date 객체를 넣어줌
 var date = new Date();//today의 Date를 세어주는 역할
+var months = {
+    1:"January",
+    2:"February",
+    3:"March",
+    4:"April",
+    5:"May",
+    6:"June",
+    7:"July",
+    8:"August",
+    9:"September",
+    10:"October",
+    11:"November",
+    12:"December",
+}
+
 function prevCalendar() {//이전 달
 // 이전 달을 today에 값을 저장하고 달력에 today를 넣어줌
 //today.getFullYear() 현재 년도//today.getMonth() 월  //today.getDate() 일 
