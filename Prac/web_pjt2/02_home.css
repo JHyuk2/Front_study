@@ -1,0 +1,10 @@
+/* 02_home.css */
+/* 아래에 코드를 작성해 주세요. */
+.card-img-top {
+    max-width: 100%;
+    object-fit: cover;
+    }
+
+.card {
+    margin-top: 5px;
+}
