@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>EDIT</h1>
+<br>
+<form action="{% url 'articles:update' article.pk %}" method="POST">
+    {% csrf_token %}
+    TITLE : <label for="title"></label>
+    <input type="text" name="title" id="title" value="{{ article.title }}" autofocus required> <br>
+    CONTNET : <label for="content"></label>
+    <textarea style="height:200px; margin:5px 0px" name="content" id="content">{{ article.content }}</textarea><br>
+    <input type="submit" value="수정">
+</form>
+{% endblock %}
