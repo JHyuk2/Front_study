@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <h1>{{ review.pk }}번 글</h1>
+    <h2>{{ review.title }}</h2>
+    <p>{{ review.content }}</p>
+    <p>생성 : {{ review.created_at }}</p>
+    <p>수정 : {{ review.updated_at }}</p>
+    <hr>
+    <form action="{% url 'community:delete' review.pk %}" method="POST" class="d-inline">
+        {% csrf_token %}
+        <button class="btn btn-primary">삭제</button>
+    </form>
+    <button class="btn btn-primary"><a href="{% url 'community:update' review.pk %}" class="text-white">수정</a></button>
+{% endblock %}
