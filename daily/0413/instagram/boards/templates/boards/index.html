@@ -1,8 +1,9 @@
-{% extends'base.html' %}
+{% extends 'base.html' %}
 
 {% block title %} 목록 {% endblock %}
 
 {% block body %}
+    <a href="/boards/create">새 글쓰기</a>
     {% for board in boards %}
         <p> {{ board.pk }} </p>
     {% endfor %}
