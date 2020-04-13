@@ -1,0 +1,9 @@
+{% extends'base.html' %}
+
+{% block title %} 목록 {% endblock %}
+
+{% block body %}
+    {% for board in boards %}
+        <p> {{ board.pk }} </p>
+    {% endfor %}
+{% endblock %}
