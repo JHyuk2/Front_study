@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>0518 exercise & workshop</title>
+</head>
+<body>
+  <h2>Add New Todo</h2>
+  <p id="addNewTodo">
+  </p>
+  <hr>
+  <h2>Todo List</h2>
+  <ul id="todoList">
+  </ul>
+  <hr>
+  <h2>Completed Tasks</h2>
+  <ul id='completedTasks'></ul>
+  <hr>
+  <script>
+  const createTodo = function(labelName) {
+    // li checkbox input label 
+    const newInput = document.createElement('li')
+    const CheckBox = document.createElement('input')
+    CheckBox.type = 'checkbox'
+    CheckBox.addEventListener('click', function(event) {
+      if (event.target.checked) {
+        newInputLabel.style.setProperty("text-decoration", "line-through");
+        completedTasks.appendChild(newInput)
+      }
+      else {
+        newInputLabel.style.setProperty("text-decoration", null);
+        todoList.appendChild(newInput) 
+      }
+    })
+    const newInputLabel = document.createElement('label')
+    newInputLabel.innerText = labelName
+
+    const editInput = document.createElement('input')
+    editInput.type = 'text'
+
+    const editButton = document.createElement('button')
+    editButton.innerText = 'Edit'
+    editButton.addEventListener('click', function(event) {
+      newInputLabel.innerText = editInput.value
+      editInput.value = null
+    })
+
+    const deleteButton = document.createElement('button')
+    deleteButton.innerText = 'Delete'
+    deleteButton.addEventListener('click', function(event) {
+      newInput.remove()
+    })
+
+    newInput.append(CheckBox, newInputLabel, editInput, editButton, deleteButton)
+    
+    return newInput
+  }
+
+  // 1. add New Todo
+  const newTodo = document.querySelector('#addNewTodo')
+  const newTodoLabel = document.createElement('label')
+  newTodoLabel.innerText = 'Add New Todo: '
+  
+  const newTodoInput = document.createElement('input')
+  // 상용 어트리뷰트 ( 원래 약속 값 )
+  // newTodoInput.type = 'text'
+  // newTodoInput.required = true
+  // 사용자 정의 어트리뷰트
+  newTodoInput.setAttribute('type', 'text') // 좀 더 범용적인 친구, 위와 같은 기능
+
+  // newTodoInput.setAttribute('unani', '정윤환')
+  // newTodoInput.setAttribute('required', 'true')
+  const newTodoButton = document.createElement('button')
+  newTodoButton.innerText = 'Add'
+  
+  // EventListenr 부착
+  newTodoButton.addEventListener('click', function(event){
+    // todoList.append(newTodoInput.value)
+    if (newTodoInput.value) {
+      // const newInput = createTodo(newTodoInput.value)
+      todoList.appendChild(createTodo(newTodoInput.value))
+      newTodoInput.value = null
+    }
+  })
+
+  newTodo.appendChild(newTodoLabel)
+  newTodo.appendChild(newTodoInput)
+  newTodo.appendChild(newTodoButton)
+  // newTodo.append(newTodoLabel, newTodoInput, newTodoButton) 한줄로 줄이기 가능
+  
+  
+  </script>
+</body>
+</html>
